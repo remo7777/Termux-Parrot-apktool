@@ -104,7 +104,7 @@ echo -e "\e[1;34m[*] \e[32minstall packages....\e[0m";
 echo "";
 apt update -y &> /dev/null;
 (
-package && pkg install patch -y
+package && apt install patch gawk procps -y
 ) &> /dev/null;
 
 termux-wake-lock;
